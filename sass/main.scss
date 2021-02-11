@@ -1,0 +1,146 @@
+
+$color-primary:#55c57a;
+$color-primary-light:#7ed56f;
+$color-primary-dark:#28b485;
+
+$color-grey-dark:#777;
+
+$color-white:#fff;
+
+
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family: "Lato",sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+    color: $color-grey-dark;    
+}
+
+.header{
+    height: 95vh;
+    background-image: linear-gradient(to right bottom,rgba($color-primary-light,0.8),rgba($color-primary-dark,0.8)),url('../img/hero.jpg');
+    background-size: cover;
+    background-position: top;
+    clip-path: polygon(0 0,100% 0,100% 90% ,0 100%);
+    position: relative;
+}
+
+.logo-box{
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}
+.logo{
+    height: 35px;
+}
+
+.header-primary{
+    color: $color-white;
+    text-transform: uppercase;
+    margin-bottom: 60px;
+}
+
+.header-primary-main{
+  display: block;
+  font-size: 60px;
+  font-weight: 400;
+  letter-spacing: 35px;
+  animation-name: moveInLeft;
+  animation-duration: 2s;
+}
+
+.header-primary-sub{
+    display: block;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 17.4px;
+  
+  }
+
+  .text-box{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      text-align: center;
+  }
+
+  @keyframes moveInLeft{
+      0%{
+          opacity: 0;
+          transform: translateX(-500px);
+      }
+
+      100%{
+        transform: translate(0);  
+      }
+  }
+
+  @keyframes moveInBottom{
+    0%{
+        opacity: 0;
+        transform: translateY(500px);
+    }
+
+    100%{
+      transform: translate(0);  
+    }
+}
+
+  .btn:link,
+  .btn-visited
+  {
+   text-transform: uppercase;
+   text-decoration: none;
+   border-radius: 100px;
+   padding: 15px 40px;
+   transition: all .2s;
+   position: relative;
+   animation-name: moveInBottom;   
+   animation-duration: 2s;
+  }
+
+  .btn-white{
+      background-color:$color-white;
+      color: $color-grey-dark;
+      display: inline-block; 
+  }
+
+.btn:hover{
+      transform: translateY(-3px);
+      box-shadow: 0 20px 20px rgba(0, 0, 0,0.2);
+  }
+
+  .btn:active{
+    transform: translateY(-1px);
+}
+
+.btn::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    position: absolute;
+    border-radius: 100px;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+
+.btn-white::after{
+    background-color:$color-white;
+}
+
+.btn:hover::after{
+    transform: scale(1.5);
+    opacity: 0;
+}
