@@ -104,6 +104,10 @@ body {
     &:hover {
         transform: translateY(-3px);
         box-shadow: 0 20px 20px rgba($color-black, 0.2);
+        &::after {
+            transform: scale(1.5);
+            opacity: 0;
+        }
     }
     &:active {
         transform: translateY(-1px);
@@ -119,9 +123,5 @@ body {
         left: 0;
         z-index: -1;
         transition: all .4s;
-    }
-    &:hover::after {
-        transform: scale(1.5);
-        opacity: 0;
     }
 }
