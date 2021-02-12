@@ -4,7 +4,7 @@
   box-sizing: border-box; }
 
 body {
-  font-family: "Lato",sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.7;
@@ -17,40 +17,34 @@ body {
   background-position: top;
   clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
   position: relative; }
-
-.logo-box {
-  position: absolute;
-  top: 40px;
-  left: 40px; }
-
-.logo {
-  height: 35px; }
-
-.header-primary {
-  color: #fff;
-  text-transform: uppercase;
-  margin-bottom: 60px; }
-
-.header-primary-main {
-  display: block;
-  font-size: 60px;
-  font-weight: 400;
-  letter-spacing: 35px;
-  animation-name: moveInLeft;
-  animation-duration: 2s; }
-
-.header-primary-sub {
-  display: block;
-  font-size: 20px;
-  font-weight: 400;
-  letter-spacing: 17.4px; }
-
-.text-box {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center; }
+  .header__logo-box {
+    position: absolute;
+    top: 40px;
+    left: 40px; }
+  .header__logo {
+    height: 35px; }
+  .header__primary {
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 60px; }
+    .header__primary--main {
+      display: block;
+      font-size: 60px;
+      font-weight: 400;
+      letter-spacing: 35px;
+      animation-name: moveInLeft;
+      animation-duration: 2s; }
+    .header__primary--sub {
+      display: block;
+      font-size: 20px;
+      font-weight: 400;
+      letter-spacing: 17.4px; }
+  .header__text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
 
 @keyframes moveInLeft {
   0% {
@@ -66,8 +60,7 @@ body {
   100% {
     transform: translate(0); } }
 
-.btn:link,
-.btn-visited {
+.btn:link, .btn-visited {
   text-transform: uppercase;
   text-decoration: none;
   border-radius: 100px;
@@ -81,6 +74,8 @@ body {
   background-color: #fff;
   color: #777;
   display: inline-block; }
+  .btn-white::after {
+    background-color: #fff; }
 
 .btn:hover {
   transform: translateY(-3px);
@@ -100,9 +95,6 @@ body {
   left: 0;
   z-index: -1;
   transition: all .4s; }
-
-.btn-white::after {
-  background-color: #fff; }
 
 .btn:hover::after {
   transform: scale(1.5);
